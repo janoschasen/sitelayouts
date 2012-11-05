@@ -1,0 +1,58 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+p {
+	padding: 0.3em;
+}
+a {
+	color: white;
+}
+h3 {
+    text-align: center;
+}
+
+#content {
+	background-color: rgba(0,0,0,0.4);
+}
+
+#layering {
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+}
+#layering .info {
+	position: relative;
+	bottom: 20px !important;
+	width: 100px;
+	height: 30px;
+	background-size: 0.3em 0.3em;
+	background-color: rgba(255,255,255,0.4);
+	border: 1px dotted white;
+}
+#layering .info.right {
+	border-right: 3px solid red;
+}
+#layering .info.left {
+	border-left: 3px solid red;
+}
+.bounding {
+	height: 20px;
+	margin: auto;
+	background-image: 
+			linear-gradient(0deg, 
+		hsla(240, 100%, 73%, 1) 1px,
+		hsla(240, 100%, 73%, 0) 1em,
+		hsla(240, 100%, 73%, 1) 1em,
+		hsla(240, 100%, 73%, 1) 60%,
+		hsla(240, 100%, 73%, 0) 60%,
+		hsla(240, 100%, 73%, 0) 100%),
+			linear-gradient(180deg, 
+		hsla(240, 100%, 73%, 1) 1px,
+		hsla(240, 100%, 73%, 0) 1em,
+		hsla(240, 100%, 73%, 1) 1em,
+		hsla(240, 100%, 73%, 1) 60%,
+		hsla(240, 100%, 73%, 0) 60%,
+		hsla(240, 100%, 73%, 0) 100%);
+}
