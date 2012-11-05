@@ -1,5 +1,5 @@
 /*
-This layering-lib are is released under the MIT license:
+sitelayouts/layering is released under the MIT license:
 
 Copyright (c) 2012 Marco Träger marco.traeger@googlemail.com.
 It uses jquery http://jquery.com 
