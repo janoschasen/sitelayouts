@@ -67,7 +67,7 @@ function LayeringModel(element) {
 		 */
 		_e.wrapInner("<div class='container'/>");
 		_wrapper = _e.children().first();
-		_wraprer
+		_wrapper
 			.css("left" , "-" + Math.round(layer.depth*100/2) + "%")
 			.css("right", "-" + Math.round(layer.depth*100/2) + "%")
 			.css("width", Math.round(100+layer.depth*100) + "%");
