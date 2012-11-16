@@ -6,77 +6,76 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="prefixfree.min.js"></script>
-		<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="../layering.css">
     <script src="../layering.js"></script>
   </head>
 <body>
-	<div id="content">
-		<h3>
-			layering <br/> - <br/> a js and css file to build sliding layerings which
-			are depending of the window size.
-		</h3>
-		<p>
-			<pre>&lt;div id="layering"&gt;
-  &lt;div class="layer" depth="0.5" style="bottom: 0px"&gt;
-    [content in depth 0.5]
-  &lt;/div&gt;
-  &lt;div class="layer" depth="0.8" style="bottom: 0px"&gt;
-    [content in depth 0.8]
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-		  <ul>
-			  <li>depth 1.0 = size of the text layer - on text layer</li>
-			  <li>depth 0.1 = 1/10 of the text layer - far away</li>
-			  <li>depth 2.0 = 2 of the text layer - near</li>
-			</ul>
-	  </p>
-	  <p>
-	  	uses: <a href="http://jquery.com">jquery</a>,
-	  	<a href="http://leaverou.github.com/prefixfree/">prefixfree</a>. 
-	  	images: <a href="http://floatzel.net/pokemon/art.htm">pokemons</a>,
-  		<a href="http://de.wikipedia.org/wiki/Landschaft">background</a>.
-  		</ul>
-	  </p>
-	</div>
-	<div id="layering">
-		<div class="layer" depth="0.1" style="bottom: 0px">
-			<img src="http://upload.wikimedia.org/wikipedia/commons/d/dc/Elbe_-_flussaufw%C3%A4rts_kurz_nach_Ort_K%C3%B6nigstein.jpg" style="left: 0;"/>
-		</div>
-		<div class="layer" depth="0.5" style="bottom: 0px">
-			<div class="bounding" style="left: 0; right: 0;">depth 0.5 </div>
+  <div id="content">
+    <h3>
+      layering <br/> - <br/> a js and css file to build sliding layerings which
+      are depending of the window size.
+    </h3>
+  <p>
+    <pre>&lt;div id="layering"&gt;
+      &lt;div class="layer" depth="0.5" style="bottom: 0px"&gt;
+        [content in depth 0.5]
+      &lt;/div&gt;
+      &lt;div class="layer" depth="0.8" style="bottom: 0px"&gt;
+        [content in depth 0.8]
+      &lt;/div&gt;
+      &lt;/div&gt;</pre>
+    <ul>
+      <li>depth 1.0 = size of the text layer - on text layer</li>
+      <li>depth 0.1 = 1/10 of the text layer - far away</li>
+      <li>depth 2.0 = 2 of the text layer - near</li>
+    </ul>
+  </p>
+  <p>
+    uses: <a href="http://jquery.com">jquery</a>,
+    <a href="http://leaverou.github.com/prefixfree/">prefixfree</a>. 
+    images: <a href="http://floatzel.net/pokemon/art.htm">pokemons</a>,
+    <a href="http://de.wikipedia.org/wiki/Landschaft">background</a>.
+  </p>
+</div>
+<div id="layering">
+  <div class="layer" depth="0.1" style="bottom: 0px">
+    <img src="http://upload.wikimedia.org/wikipedia/commons/d/dc/Elbe_-_flussaufw%C3%A4rts_kurz_nach_Ort_K%C3%B6nigstein.jpg" style="left: 0;"/>
+  </div>
+  <div class="layer" depth="0.5" style="bottom: 0px">
+    <div class="bounding" style="left: 0; right: 0;">depth 0.5 </div>
 			
-			<div class="info left" style="left:  0%;">0% left</div>
-			<div class="info left" style="left:  25%;">25% left</div>
-			<div class="info" style="left:  0%; right: 0%;">center</div>
-			<div class="info right" style="right: 25%;">25% right</div>
-			<div class="info right" style="right: 0%;">0% right</div>
+      <div class="info left" style="left:  0%;">0% left</div>
+      <div class="info left" style="left:  25%;">25% left</div>
+      <div class="info" style="left:  0%; right: 0%;">center</div>
+      <div class="info right" style="right: 25%;">25% right</div>
+      <div class="info right" style="right: 0%;">0% right</div>
 			
-			<img src="http://floatzel.net/pokemon/Turtwig.png" width="400px" height="400px" style="left: 45%; opacity: 0.6;"/>
-		</div>
-		<div class="layer" depth="0.7" style="bottom: 0">
-			<div class="bounding" style="left: 0; right: 0;">depth 0.7 </div>
+      <img src="http://floatzel.net/pokemon/Turtwig.png" width="400px" height="400px" style="left: 45%; opacity: 0.6;"/>
+    </div>
+    <div class="layer" depth="0.7" style="bottom: 0">
+      <div class="bounding" style="left: 0; right: 0;">depth 0.7 </div>
 			
-			<div class="info left" style="left:  0%;">0% left</div>
-			<div class="info left" style="left:  25%;">25% left</div>
-			<div class="info" style="left:  0%; right: 0%;">center</div>
-			<div class="info right" style="right: 25%;">25% right</div>
-			<div class="info right" style="right: 0%;">0% right</div>
+      <div class="info left" style="left:  0%;">0% left</div>
+      <div class="info left" style="left:  25%;">25% left</div>
+      <div class="info" style="left:  0%; right: 0%;">center</div>
+      <div class="info right" style="right: 25%;">25% right</div>
+      <div class="info right" style="right: 0%;">0% right</div>
 			
-			<img src="http://floatzel.net/pokemon/Typhlosion2.png" width="300px" height="300px" style="left: 10%; opacity: 0.6;"/>
-		</div>
-		<div class="layer" depth="0.3" style="bottom: 0">
-			<div class="bounding" style="left: 0; right: 0;">depth 0.3 </div>
+      <img src="http://floatzel.net/pokemon/Typhlosion2.png" width="300px" height="300px" style="left: 10%; opacity: 0.6;"/>
+    </div>
+    <div class="layer" depth="0.3" style="bottom: 0">
+      <div class="bounding" style="left: 0; right: 0;">depth 0.3 </div>
 		
-			<div class="info left" style="left:  0%;">0% left</div>
-			<div class="info left" style="left:  25%;">25% left</div>
-			<div class="info" style="left:  0%; right: 0%;">center</div>
-			<div class="info right" style="right: 25%;">25% right</div>
-			<div class="info right" style="right: 0%;">0% right</div>
+      <div class="info left" style="left:  0%;">0% left</div>
+      <div class="info left" style="left:  25%;">25% left</div>
+      <div class="info" style="left:  0%; right: 0%;">center</div>
+      <div class="info right" style="right: 25%;">25% right</div>
+      <div class="info right" style="right: 0%;">0% right</div>
 			
-			<img src="http://floatzel.net/pokemon/Lugia.png" width="200px" height="200px" style="right: 25%; opacity: 0.6;"/>
-		</div>
-	</div>
+      <img src="http://floatzel.net/pokemon/Lugia.png" width="200px" height="200px" style="right: 25%; opacity: 0.6;"/>
+    </div>
+  </div>
 </body>
 </html>
