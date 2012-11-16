@@ -36,11 +36,12 @@ function Layer(element, depth) {
 	this.depth = depth;
 
 	this.x = function(newx) {
-		/* layerdepth-depending scaling */
-		_x = newx / (1 / depth);
+		/* layerdepth-depend scale */
+		var _x = newx * depth; // shorthand for: newx / (1 / depth)
 
-		$(element).css("left", (-_x) + "px");
-		$(element).css("right", (_x) + "px");
+		$(element)
+			.css("left", (-_x) + "px");
+			.css("right", (_x) + "px");
 	}
 }
 
@@ -49,7 +50,7 @@ function LayeringModel(element) {
 	element.children().each(function(index) {
 		layers.push(new Layer($(this), $(this).attr('depth')));
 	});
-	/* sort layer via depth, high depth first (back to front) */
+	/* sort layer via depth. high depth first (back to front) */
 	layers = layers.sort(function(a, b) {
 		return a.depth - b.depth;
 	});
@@ -58,18 +59,18 @@ function LayeringModel(element) {
 		var layer = layers[i];
 		
 		_e = $(layer.element);
-		/* dynamic */
+		/* reorder z-index by depth */
 		_e.css("z-index", i);
 		
 		/* 
-		 * warper to adjust relative positioning and setting 
-		 * the procentual width to 100%.
+		 * warper to adjust relative positioning
 		 */
 		_e.wrapInner("<div class='container'/>");
-		_warped = _e.children().first();
-		_warped.css("left" , "-" + Math.round(layer.depth*100/2) + "%");
-		_warped.css("right", "-" + Math.round(layer.depth*100/2) + "%");
-		_warped.css("width", Math.round(100+layer.depth*100) + "%");
+		_wrapper = _e.children().first();
+		_wraprer
+			.css("left" , "-" + Math.round(layer.depth*100/2) + "%")
+			.css("right", "-" + Math.round(layer.depth*100/2) + "%")
+			.css("width", Math.round(100+layer.depth*100) + "%");
 		
 		layer.x(0);
 	}
@@ -83,8 +84,8 @@ function LayeringModel(element) {
 	}
 	
 	this.x = function(newx) {
-		for(i = 0; i < layers.length; i++) {
-			layers[i].x(newx);
+		for(i = 0; i < this.size(); i++) {
+			this.layer(i).x(newx);
 		}
 	}
 }
@@ -92,7 +93,7 @@ function LayeringModel(element) {
 var model;
 
 $(window).load(function() {
-	// run code
+	// builder layering
 	model = new LayeringModel($('#layering'));
 });
 
