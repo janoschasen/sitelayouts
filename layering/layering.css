@@ -30,21 +30,19 @@ OTHER DEALINGS IN THE SOFTWARE.
 @CHARSET "UTF-8";
 
 #layering {
-	position: fixed;
+	position: absolute;
 	z-index: -100;
 	bottom: 0;
 	width: 100%;
+	height: 100%;
 }
 
 #layering .layer {
 	display: block;
 	position: absolute;
 	margin: auto;
-	
 	bottom: 0;
 	padding: 0;
-	width: 100%;
-	height: 100%;
 }
 
 #layering .layer .container {
